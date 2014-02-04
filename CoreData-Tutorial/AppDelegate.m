@@ -26,6 +26,11 @@
     return YES;
 }
 
+#pragma mark - CRUD Operations
+
+/**
+ *  Creates some models and persists them using Core Data.
+ */
 - (void)create
 {
     // Create Artist
@@ -52,6 +57,9 @@
     [self.managedObjectContext save:nil];
 }
 
+/**
+ *  Prints the contents of our database.
+ */
 - (void)read
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Artist"];
@@ -70,6 +78,9 @@
     }
 }
 
+/**
+ *  Removes an object from our database.
+ */
 - (void)deleteArtist
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Artist"];
