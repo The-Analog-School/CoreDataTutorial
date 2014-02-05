@@ -128,6 +128,10 @@
     return _persistentStoreCoordinator;
 }
 
+/**
+ * The Managed Object Model is constructed from our schema. It basically holds all
+ * the "blueprints" of our models and objects. 
+ */
 - (NSManagedObjectModel *)managedObjectModel
 {
     if (!_managedObjectModel) {
